@@ -1,0 +1,15 @@
+import api from './axios';
+export const adminLogin          = (d) => api.post('/auth/login', d);
+export const setupAdmin          = (d) => api.post('/auth/setup', d);
+export const getStats            = ()  => api.get('/admin/stats');
+export const getSubmissions      = (p) => api.get('/admin/submissions', { params: p });
+export const getSubmission       = (id)=> api.get(`/admin/submissions/${id}`);
+export const activateLink        = (id)=> api.patch(`/admin/submissions/${id}/activate`);
+export const deactivateLink      = (id)=> api.patch(`/admin/submissions/${id}/deactivate`);
+export const verifyPayment       = (id)=> api.patch(`/admin/submissions/${id}/verify-payment`);
+export const getAdminTemplates   = (p) => api.get('/admin/templates', { params: p });
+export const createTemplate      = (d) => api.post('/admin/templates', d);
+export const updateTemplate      = (id,d)=> api.put(`/admin/templates/${id}`, d);
+export const deleteTemplate      = (id)=> api.delete(`/admin/templates/${id}`);
+export const getSettings         = ()  => api.get('/admin/settings');
+export const updateSettings      = (d) => api.put('/admin/settings', d);

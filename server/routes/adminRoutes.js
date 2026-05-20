@@ -1,0 +1,18 @@
+const router = require('express').Router();
+const auth = require('../middleware/authMiddleware');
+const ctrl = require('../controllers/adminController');
+const { uploadScreenshot } = require('../config/cloudinary');
+router.use(auth);
+router.get('/stats', ctrl.getStats);
+router.get('/submissions', ctrl.getSubmissions);
+router.get('/submissions/:id', ctrl.getSubmission);
+router.patch('/submissions/:id/activate', ctrl.activateLink);
+router.patch('/submissions/:id/deactivate', ctrl.deactivateLink);
+router.patch('/submissions/:id/verify-payment', ctrl.verifyPayment);
+router.get('/templates', ctrl.getTemplates);
+router.post('/templates', ctrl.createTemplate);
+router.put('/templates/:id', ctrl.updateTemplate);
+router.delete('/templates/:id', ctrl.deleteTemplate);
+router.get('/settings', ctrl.getSettings);
+router.put('/settings', uploadScreenshot.single('qrCode'), ctrl.updateSettings);
+module.exports = router;
