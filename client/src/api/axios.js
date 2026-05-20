@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const api = axios.create({ baseURL: 'https://client1-0epa.onrender.com' });
+const api = axios.create({ baseURL: 'https://server-prrj.onrender.com' });
 
 api.interceptors.request.use((cfg) => {
   const token = localStorage.getItem('wc_token');
