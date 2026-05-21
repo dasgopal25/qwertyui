@@ -75,7 +75,7 @@ export default function PaymentPage() {
           )}
 
           <p style={{ fontSize:13, color:'#6b7280', marginTop:16 }}>
-            UPI ID: <strong>wishcreator@upi</strong>
+            UPI ID: <strong>dasgopal01978-2@okaxis</strong>
           </p>
         </div>
 
