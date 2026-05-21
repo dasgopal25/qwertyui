@@ -352,7 +352,7 @@ export default function WishPage() {
                             animate={{ opacity: 1, scale: 1, x: 0 }}
                             exit={{ opacity: 0, scale: 0.95, x: -40 }}
                             transition={{ duration: 0.5 }}
-                            style={{ width: '100%', maxHeight: 340, objectFit: 'contain', display: 'block', background: '#f8f8f8' }}
+                            style={{ width: '100%', maxHeight: 600, objectFit: 'fill', display: 'block', background: '#292121' }}
                           />
                         </AnimatePresence>
 
